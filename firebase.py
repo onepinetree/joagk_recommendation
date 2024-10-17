@@ -4,7 +4,8 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning)
 
 if not firebase_admin._apps:
-    cred = credentials.Certificate('orengeapp-43854-firebase-adminsdk-zq2mz-1a989fa573.json')
+    cred = credentials.Certificate('/etc/secrets/orengewebapp.json')
+    # cred = credentials.Certificate('orengeapp-43854-firebase-adminsdk-zq2mz-1a989fa573.json')
     app = firebase_admin.initialize_app(cred)
 
 db = firestore.client()
