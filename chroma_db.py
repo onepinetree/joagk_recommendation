@@ -24,7 +24,7 @@ def getSimilarUsers(nickname:str):
 
     results = collection.query(
         query_texts=[user_query_text], # Chroma will embed this for you
-        n_results=5 # how many results to return
+        n_results=2 # how many results to return
     )
     return results
 
